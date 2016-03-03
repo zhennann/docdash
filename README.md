@@ -36,7 +36,7 @@ In your `.jsdoc.json` file, add a template option.
 
 ```json
 "opts": {
-  "template": "node_modules/dodash"
+  "template": "node_modules/docdash"
 }
 ```
 
@@ -56,7 +56,7 @@ In your `.jsdoc.json` file, add a template option.
         "plugins/markdown"
     ],
     "opts": {
-        "template": "assets/template/minami-master/",
+        "template": "assets/template/docdash/",
         "encoding": "utf8",
         "destination": "docs/",
         "recurse": true,
