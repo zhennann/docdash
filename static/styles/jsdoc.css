@@ -390,6 +390,14 @@ footer {
   margin: 1em 0;
 }
 
+.params .type {
+  white-space: nowrap;
+}
+
+.params code {
+  white-space: pre;
+}
+
 .params td, .params .name, .props .name, .name code {
    color: #4D4E53;
    font-family: Consolas, Monaco, 'Andale Mono', monospace;
