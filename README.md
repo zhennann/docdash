@@ -28,7 +28,7 @@ In your projects `package.json` file add a generate script:
 
 ```json
 "script": {
-  "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json"
+  "generate-docs": "node_modules/.bin/jsdoc -c .jsdoc.json"
 }
 ```
 
@@ -41,6 +41,8 @@ In your `.jsdoc.json` file, add a template option.
 ```
 
 ## Sample `.jsdoc.json`
+
+See the config file for the [fixtures](fixtures/fixtures.conf.json) or the sample below.
 
 ```json
 {
@@ -75,4 +77,4 @@ Thanks to [lodash](https://lodash.com/docs) and [minami](https://github.com/niji
 
 ## License
 
-Licensed under the Apache2 license. (see [license](LICENSE.md)).
+Licensed under the Apache License, version 2.0. (see [Apache-2.0](LICENSE.md)).

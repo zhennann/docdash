@@ -10,8 +10,14 @@
     "type": "git",
     "url": "https://github.com/clenemt/docdash.git"
   },
+  "devDependencies": {
+    "jsdoc": "latest"
+  },
+  "scripts": {
+    "test": "jsdoc -c fixtures/fixtures.conf.json"
+  },
   "author": "Clement Moron <clement.moron@gmail.com>",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "keywords": [
     "jsdoc",
     "template"
