@@ -1,10 +1,10 @@
 {
   "name": "docdash",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A clean, responsive documentation template theme for JSDoc 3 inspired by lodash and minami",
   "main": "publish.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jsdoc -c fixtures/fixtures.conf.json"
   },
   "repository": {
     "type": "git",
@@ -12,9 +12,6 @@
   },
   "devDependencies": {
     "jsdoc": "latest"
-  },
-  "scripts": {
-    "test": "jsdoc -c fixtures/fixtures.conf.json"
   },
   "author": "Clement Moron <clement.moron@gmail.com>",
   "license": "Apache-2.0",
