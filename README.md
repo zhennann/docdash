@@ -8,13 +8,17 @@ A clean, responsive documentation template theme for JSDoc 3.
 
 ![docdash-screenshot-2](https://cloud.githubusercontent.com/assets/447956/13401057/e30effd8-df0a-11e5-9f51-66257ac38e94.jpg)
 
+## Example
+
+See http://clenemt.github.io/docdash/ for a sample demo. :rocket:
+
 ## Install
 
 ```bash
-$ npm install --save-dev docdash
+$ npm install docdash
 ```
 
-## Simple usage with cli
+## Usage
 
 Clone repository to your designated `jsdoc` template directory, then:
 
@@ -22,17 +26,17 @@ Clone repository to your designated `jsdoc` template directory, then:
 $ jsdoc entry-file.js -t path/to/docdash
 ```
 
-## Usage with build process
+## Usage (npm)
 
-In your projects `package.json` file add a generate script:
+In your projects `package.json` file add a new script:
 
 ```json
 "script": {
-  "generate-docs": "node_modules/.bin/jsdoc -c .jsdoc.json"
+  "generate-docs": "node_modules/.bin/jsdoc -c jsdoc.json"
 }
 ```
 
-In your `.jsdoc.json` file, add a template option.
+In your `jsdoc.json` file, add a template option.
 
 ```json
 "opts": {
@@ -40,7 +44,7 @@ In your `.jsdoc.json` file, add a template option.
 }
 ```
 
-## Sample `.jsdoc.json`
+## Sample `jsdoc.json`
 
 See the config file for the [fixtures](fixtures/fixtures.conf.json) or the sample below.
 
@@ -73,7 +77,7 @@ See the config file for the [fixtures](fixtures/fixtures.conf.json) or the sampl
 
 ## Thanks
 
-Thanks to [lodash](https://lodash.com/docs) and [minami](https://github.com/nijikokun/minami).
+Thanks to [lodash](https://lodash.com) and [minami](https://github.com/nijikokun/minami).
 
 ## License
 
