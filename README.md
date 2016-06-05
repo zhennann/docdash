@@ -1,5 +1,4 @@
 # Docdash
-
 [![npm package](https://img.shields.io/npm/v/docdash.svg)](https://www.npmjs.com/package/docdash) [![license](https://img.shields.io/npm/l/docdash.svg)](LICENSE.md)
 
 A clean, responsive documentation template theme for JSDoc 3.
@@ -9,7 +8,6 @@ A clean, responsive documentation template theme for JSDoc 3.
 ![docdash-screenshot-2](https://cloud.githubusercontent.com/assets/447956/13401057/e30effd8-df0a-11e5-9f51-66257ac38e94.jpg)
 
 ## Example
-
 See http://clenemt.github.io/docdash/ for a sample demo. :rocket:
 
 ## Install
@@ -19,7 +17,6 @@ $ npm install docdash
 ```
 
 ## Usage
-
 Clone repository to your designated `jsdoc` template directory, then:
 
 ```bash
@@ -27,7 +24,6 @@ $ jsdoc entry-file.js -t path/to/docdash
 ```
 
 ## Usage (npm)
-
 In your projects `package.json` file add a new script:
 
 ```json
@@ -45,7 +41,6 @@ In your `jsdoc.json` file, add a template option.
 ```
 
 ## Sample `jsdoc.json`
-
 See the config file for the [fixtures](fixtures/fixtures.conf.json) or the sample below.
 
 ```json
@@ -75,10 +70,22 @@ See the config file for the [fixtures](fixtures/fixtures.conf.json) or the sampl
 }
 ```
 
-## Thanks
+## Options
+Docdash supports the following options:
 
+```json
+{
+    "docdash": {
+        "static": [false|true],  // Display the static members inside the navbar
+        "sort": [false|true]     // Sort the methods in the navbar
+    }
+}
+```
+
+Place them anywhere inside your `jsdoc.json` file.
+
+## Thanks
 Thanks to [lodash](https://lodash.com) and [minami](https://github.com/nijikokun/minami).
 
 ## License
-
 Licensed under the Apache License, version 2.0. (see [Apache-2.0](LICENSE.md)).
