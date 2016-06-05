@@ -408,6 +408,7 @@ function buildNav(members) {
     @param {Tutorial} tutorials
  */
 exports.publish = function(taffyData, opts, tutorials) {
+    var docdash = env && env.conf && env.conf.docdash || {};
     data = taffyData;
 
     var conf = env.conf.templates || {};
@@ -434,7 +435,8 @@ exports.publish = function(taffyData, opts, tutorials) {
     helper.setTutorials(tutorials);
 
     data = helper.prune(data);
-    data.sort('longname, version, since');
+
+    docdash.sort !== false && data.sort('longname, version, since');
     helper.addEventListeners(data);
 
     var sourceFiles = {};
