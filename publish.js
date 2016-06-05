@@ -296,12 +296,27 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
         items.forEach(function(item) {
             var methods = find({kind:'function', memberof: item.longname});
             var members = find({kind:'member', memberof: item.longname});
+            var docdash = env && env.conf && env.conf.docdash || {};
 
             if ( !hasOwnProp.call(item, 'longname') ) {
                 itemsNav += '<li>' + linktoFn('', item.name);
                 itemsNav += '</li>';
             } else if ( !hasOwnProp.call(itemsSeen, item.longname) ) {
                 itemsNav += '<li>' + linktoFn(item.longname, item.name.replace(/^module:/, ''));
+
+                if (docdash.static && members.find(function (m) { return m.scope === 'static'; } )) {
+                    itemsNav += "<ul class='members'>";
+
+                    members.forEach(function (member) {
+                        if (!member.scope === 'static') return;
+                        itemsNav += "<li data-type='member'>";
+                        itemsNav += linkto(member.longname, member.name);
+                        itemsNav += "</li>";
+                    });
+
+                    itemsNav += "</ul>";
+                }
+
                 if (methods.length) {
                     itemsNav += "<ul class='methods'>";
 
@@ -313,6 +328,7 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
 
                     itemsNav += "</ul>";
                 }
+
                 itemsNav += '</li>';
                 itemsSeen[item.longname] = true;
             }
@@ -346,8 +362,10 @@ function linktoExternal(longName, name) {
  * @param {array<object>} members.tutorials
  * @param {array<object>} members.events
  * @param {array<object>} members.interfaces
- * @return {string} The HTML for the navigation sidebar.
+ * @return {s
+ ring} The HTML for the navigation sidebar.
  */
+
 function buildNav(members) {
     var nav = '<h2><a href="index.html">Home</a></h2>';
     var seen = {};
