@@ -73,7 +73,7 @@ See the config file for the [fixtures](fixtures/fixtures.conf.json) or the sampl
 ## Options
 Docdash supports the following options:
 
-```json
+```
 {
     "docdash": {
         "static": [false|true],  // Display the static members inside the navbar
