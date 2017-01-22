@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?js if (!env.conf.docdash) { env.conf.docdash = {};} ?>
     <meta charset="utf-8">
     <title><?js= title ?> - <?js= ((env.conf.docdash.meta && env.conf.docdash.meta.title) || "Documentation") ?></title>
     <?js if (env.conf.docdash.meta) { ?>
