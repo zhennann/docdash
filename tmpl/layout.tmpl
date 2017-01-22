@@ -70,12 +70,14 @@
 
 <script>prettyPrint();</script>
 <script src="scripts/linenumber.js"></script>
+<?js if (env.conf.docdash.search || env.conf.docdash.collapse) { ?>
 <script src="scripts/jquery-3.1.1.min.js"></script>
 <?js if (env.conf.docdash.search) { ?>
 <script src="scripts/search.js"></script>
 <?js } ?>
 <?js if (env.conf.docdash.collapse) { ?>
 <script src="scripts/collapse.js"></script>
+<?js } ?>
 <?js } ?>
 </body>
 </html>
