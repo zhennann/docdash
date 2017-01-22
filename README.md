@@ -77,7 +77,7 @@ Docdash supports the following options:
 {
     "docdash": {
         "static": [false|true],  // Display the static members inside the navbar
-        "sort": [false|true]     // Sort the methods in the navbar
+        "sort": [false|true],    // Sort the methods in the navbar
         "disqus": "",            // Shortname for your disqus (subdomain during site creation)
 		"openGraph": {           // Open Graph options (mostly for Facebook and other sites to easily extract meta information)
 			"title": "",         // Title of the website
@@ -91,8 +91,9 @@ Docdash supports the following options:
 			"description": "",   // Description of overal contents of your website
 			"keyword": ""        // Keywords for search engines
 		},
-        "search": false,         // Display seach box above navigation which allows to search/filter navigation items
-        "collapse": false        // Collapse navigation by default except current object's navigation of the current page
+        "search": [false|true],  // Display seach box above navigation which allows to search/filter navigation items
+        "collapse": [false|true],// Collapse navigation by default except current object's navigation of the current page
+        "scripts": []            // Array of external (or relative local copied using templates.default.staticFiles.include) scripts to inject into HTML
     }
 }
 ```

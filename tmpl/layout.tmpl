@@ -80,5 +80,12 @@
 <script src="scripts/collapse.js"></script>
 <?js } ?>
 <?js } ?>
+<?js if (env.conf.docdash.scripts && env.conf.docdash.scripts.length) {
+    for(var i = 0; i < env.conf.docdash.scripts.length; i++){
+    ?>
+<script src="<?js= env.conf.docdash.scripts[i] ?>"></script>
+    <?js
+    }
+} ?>
 </body>
 </html>

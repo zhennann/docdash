@@ -45,6 +45,7 @@
 			"keyword": ""
 		},
         "search": false,
-        "collapse": false
+        "collapse": false,
+        "scripts": []
     }
 }
