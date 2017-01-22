@@ -208,14 +208,7 @@ nav > ul {
 
 nav > ul > li > a {
   color: #606;
-}
-
-nav ul ul {
-  margin-bottom: 10px
-}
-
-nav ul ul + ul {
-  margin-top: -10px;
+  margin-top: 10px;
 }
 
 nav ul ul a {
