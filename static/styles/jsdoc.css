@@ -647,3 +647,7 @@ span.param-type, .params td .param-type, .param-type dd {
   margin-left: -14px;
   margin-right: 5px;
 }
+
+#disqus_thread{
+    margin-left: 30px;
+}
