@@ -376,7 +376,8 @@ function buildNav(members) {
     var nav = '<h2><a href="index.html">Home</a></h2>';
     var seen = {};
     var seenTutorials = {};
-
+    var docdash = env && env.conf && env.conf.docdash || {};
+    
     nav += buildMemberNav(members.classes, 'Classes', seen, linkto);
     nav += buildMemberNav(members.modules, 'Modules', {}, linkto);
     nav += buildMemberNav(members.externals, 'Externals', seen, linktoExternal);
@@ -390,7 +391,7 @@ function buildNav(members) {
         var globalNav = '';
 
         members.globals.forEach(function(g) {
-            if ( g.kind !== 'typedef' && !hasOwnProp.call(seen, g.longname) ) {
+            if ( (docdash.typedefs || g.kind !== 'typedef') && !hasOwnProp.call(seen, g.longname) ) {
                 globalNav += '<li>' + linkto(g.longname, g.name) + '</li>';
             }
             seen[g.longname] = true;

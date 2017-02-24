@@ -93,6 +93,7 @@ Docdash supports the following options:
 		},
         "search": [false|true],  // Display seach box above navigation which allows to search/filter navigation items
         "collapse": [false|true],// Collapse navigation by default except current object's navigation of the current page
+        "typedefs": [false|true],// Include typedefs in menu
         "scripts": []            // Array of external (or relative local copied using templates.default.staticFiles.include) scripts to inject into HTML
     }
 }

@@ -46,6 +46,7 @@
 		},
         "search": false,
         "collapse": false,
+        "typedefs": false,
         "scripts": []
     }
 }
