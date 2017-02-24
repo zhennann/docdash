@@ -47,6 +47,7 @@
         "search": false,
         "collapse": false,
         "typedefs": false,
+        "removeQuotes": "none",
         "scripts": []
     }
 }

@@ -449,6 +449,28 @@ exports.publish = function(taffyData, opts, tutorials) {
     var sourceFiles = {};
     var sourceFilePaths = [];
     data().each(function(doclet) {
+         if(docdash.removeQuotes){
+            if(docdash.removeQuotes === "all"){
+                if(doclet.name){
+                    doclet.name = doclet.name.replace(/"/g, '');
+                    doclet.name = doclet.name.replace(/'/g, '');
+                }
+                if(doclet.longname){
+                    doclet.longname = doclet.longname.replace(/"/g, '');
+                    doclet.longname = doclet.longname.replace(/'/g, '');
+                }
+            }
+            else if(docdash.removeQuotes === "trim"){
+                if(doclet.name){
+                    doclet.name = doclet.name.replace(/^"(.*)"$/, '$1');
+                    doclet.name = doclet.name.replace(/^'(.*)'$/, '$1');
+                }
+                if(doclet.longname){
+                    doclet.longname = doclet.longname.replace(/^"(.*)"$/, '$1');
+                    doclet.longname = doclet.longname.replace(/^'(.*)'$/, '$1');
+                }
+            }
+         }
          doclet.attribs = '';
 
         if (doclet.examples) {
