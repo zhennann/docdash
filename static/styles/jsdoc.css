@@ -294,7 +294,7 @@ footer {
 }
 
 .details dt {
-   width: 120px;
+   width: auto;
    float: left;
    padding-left: 10px;
 }
