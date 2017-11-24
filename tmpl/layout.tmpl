@@ -82,9 +82,15 @@
 <?js } ?>
 <?js if (env.conf.docdash.scripts && env.conf.docdash.scripts.length) {
     for(var i = 0; i < env.conf.docdash.scripts.length; i++){
+        if (env.conf.docdash.scripts[i].indexOf(".css") != -1) {
     ?>
-<script src="<?js= env.conf.docdash.scripts[i] ?>"></script>
+    <link type="text/css" rel="stylesheet" href="<?js= env.conf.docdash.scripts[i] ?>">
     <?js
+        } else {
+    ?>
+    <script src="<?js= env.conf.docdash.scripts[i] ?>"></script>
+    <?js
+        }
     }
 } ?>
 </body>
