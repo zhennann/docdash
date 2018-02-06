@@ -370,15 +370,22 @@ function buildNav(members) {
     var nav = '<h2><a href="index.html">Home</a></h2>';
     var seen = {};
     var seenTutorials = {};
-
-    nav += buildMemberNav(members.classes, 'Classes', seen, linkto);
-    nav += buildMemberNav(members.modules, 'Modules', {}, linkto);
-    nav += buildMemberNav(members.externals, 'Externals', seen, linktoExternal);
-    nav += buildMemberNav(members.events, 'Events', seen, linkto);
-    nav += buildMemberNav(members.namespaces, 'Namespaces', seen, linkto);
-    nav += buildMemberNav(members.mixins, 'Mixins', seen, linkto);
-    nav += buildMemberNav(members.tutorials, 'Tutorials', seenTutorials, linktoTutorial);
-    nav += buildMemberNav(members.interfaces, 'Interfaces', seen, linkto);
+    var docdash = env && env.conf && env.conf.docdash || {};
+    var defaultOrder = [
+        'Classes', 'Modules', 'Externals', 'Events', 'Namespaces', 'Mixins', 'Tutorials', 'Interfaces'
+    ];
+    var order = docdash.sectionOrder || defaultOrder;
+    var sections = {
+        Classes: buildMemberNav(members.classes, 'Classes', seen, linkto),
+        Modules: buildMemberNav(members.modules, 'Modules', {}, linkto),
+        Externals: buildMemberNav(members.externals, 'Externals', seen, linktoExternal),
+        Events: buildMemberNav(members.events, 'Events', seen, linkto),
+        Namespaces: buildMemberNav(members.namespaces, 'Namespaces', seen, linkto),
+        Mixins: buildMemberNav(members.mixins, 'Mixins', seen, linkto),
+        Tutorials: buildMemberNav(members.tutorials, 'Tutorials', seenTutorials, linktoTutorial),
+        Interfaces: buildMemberNav(members.interfaces, 'Interfaces', seen, linkto),
+    };
+    order.forEach(member => nav += sections[member]);
 
     if (members.globals.length) {
         var globalNav = '';

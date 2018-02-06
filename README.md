@@ -77,7 +77,17 @@ Docdash supports the following options:
 {
     "docdash": {
         "static": [false|true],  // Display the static members inside the navbar
-        "sort": [false|true]     // Sort the methods in the navbar
+        "sort": [false|true],    // Sort the methods in the navbar
+        "sectionOrder": [        // Order the main section in the navbar (default order shown here)
+             "Classes",
+             "Modules",
+             "Externals",
+             "Events",
+             "Namespaces",
+             "Mixins",
+             "Tutorials",
+             "Interfaces"
+        ]
     }
 }
 ```
