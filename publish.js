@@ -448,14 +448,14 @@ exports.publish = function(taffyData, opts, tutorials) {
             doclet.examples = doclet.examples.map(function(example) {
                 var caption, code;
 
-                if (example.match(/^\s*<caption>([\s\S]+?)<\/caption>(\s*[\n\r])([\s\S]+)$/i)) {
+                if (example && example.match(/^\s*<caption>([\s\S]+?)<\/caption>(\s*[\n\r])([\s\S]+)$/i)) {
                     caption = RegExp.$1;
                     code = RegExp.$3;
                 }
 
                 return {
                     caption: caption || '',
-                    code: code || example
+                    code: code || example || ''
                 };
             });
         }
