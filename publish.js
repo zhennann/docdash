@@ -309,7 +309,10 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
 
                     members.forEach(function (member) {
                         if (!member.scope === 'static') return;
-                        itemsNav += "<li data-type='member'>";
+                        itemsNav += "<li data-type='member'";
+                        if(docdash.collapse)
+                            itemsNav += " style='display: none;'";
+                        itemsNav += ">";
                         itemsNav += linkto(member.longname, member.name);
                         itemsNav += "</li>";
                     });
@@ -321,7 +324,10 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
                     itemsNav += "<ul class='methods'>";
 
                     methods.forEach(function (method) {
-                        itemsNav += "<li data-type='method'>";
+                        itemsNav += "<li data-type='method'";
+                        if(docdash.collapse)
+                            itemsNav += " style='display: none;'";
+                        itemsNav += ">";
                         itemsNav += linkto(method.longname, method.name);
                         itemsNav += "</li>";
                     });
@@ -370,7 +376,8 @@ function buildNav(members) {
     var nav = '<h2><a href="index.html">Home</a></h2>';
     var seen = {};
     var seenTutorials = {};
-
+    var docdash = env && env.conf && env.conf.docdash || {};
+    
     nav += buildMemberNav(members.classes, 'Classes', seen, linkto);
     nav += buildMemberNav(members.modules, 'Modules', {}, linkto);
     nav += buildMemberNav(members.externals, 'Externals', seen, linktoExternal);
@@ -384,7 +391,7 @@ function buildNav(members) {
         var globalNav = '';
 
         members.globals.forEach(function(g) {
-            if ( g.kind !== 'typedef' && !hasOwnProp.call(seen, g.longname) ) {
+            if ( (docdash.typedefs || g.kind !== 'typedef') && !hasOwnProp.call(seen, g.longname) ) {
                 globalNav += '<li>' + linkto(g.longname, g.name) + '</li>';
             }
             seen[g.longname] = true;
@@ -442,6 +449,28 @@ exports.publish = function(taffyData, opts, tutorials) {
     var sourceFiles = {};
     var sourceFilePaths = [];
     data().each(function(doclet) {
+         if(docdash.removeQuotes){
+            if(docdash.removeQuotes === "all"){
+                if(doclet.name){
+                    doclet.name = doclet.name.replace(/"/g, '');
+                    doclet.name = doclet.name.replace(/'/g, '');
+                }
+                if(doclet.longname){
+                    doclet.longname = doclet.longname.replace(/"/g, '');
+                    doclet.longname = doclet.longname.replace(/'/g, '');
+                }
+            }
+            else if(docdash.removeQuotes === "trim"){
+                if(doclet.name){
+                    doclet.name = doclet.name.replace(/^"(.*)"$/, '$1');
+                    doclet.name = doclet.name.replace(/^'(.*)'$/, '$1');
+                }
+                if(doclet.longname){
+                    doclet.longname = doclet.longname.replace(/^"(.*)"$/, '$1');
+                    doclet.longname = doclet.longname.replace(/^'(.*)'$/, '$1');
+                }
+            }
+         }
          doclet.attribs = '';
 
         if (doclet.examples) {

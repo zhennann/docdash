@@ -30,6 +30,24 @@
     },
     "docdash": {
         "static": false,
-        "sort": true
+        "sort": true,
+        "disqus": "",
+		"openGraph": {
+			"title": "",
+			"type": "website",
+			"image": "",
+			"site_name": "",
+			"url": ""
+		},
+		"meta": {
+			"title": "",
+			"description": "",
+			"keyword": ""
+		},
+        "search": false,
+        "collapse": false,
+        "typedefs": false,
+        "removeQuotes": "none",
+        "scripts": []
     }
 }
