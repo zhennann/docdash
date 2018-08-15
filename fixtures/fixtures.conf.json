@@ -18,7 +18,8 @@
     },
     "markdown": {
         "parser": "gfm",
-        "hardwrap": true
+        "hardwrap": true,
+        "idInHeadings": true
     },
     "templates": {
         "cleverLinks": false,
@@ -29,24 +30,24 @@
         }
     },
     "docdash": {
-        "static": false,
+        "static": true,
         "sort": true,
         "disqus": "",
 		"openGraph": {
-			"title": "",
+			"title": "Docdash",
 			"type": "website",
-			"image": "",
-			"site_name": "",
-			"url": ""
+			"image": "https://cloud.githubusercontent.com/assets/447956/13398144/4dde7f36-defd-11e5-8909-1a9013302cb9.png",
+			"site_name": "Docdash",
+			"url": "http://clenemt.github.io/docdash/"
 		},
 		"meta": {
-			"title": "",
-			"description": "",
-			"keyword": ""
+			"title": "Docdash",
+			"description": "A clean, responsive documentation template theme for JSDoc 3.",
+			"keyword": "jsdoc, docdash"
 		},
-        "search": false,
-        "collapse": false,
-        "typedefs": false,
+        "search": true,
+        "collapse": true,
+        "typedefs": true,
         "removeQuotes": "none",
         "scripts": []
     }
