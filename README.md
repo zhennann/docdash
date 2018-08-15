@@ -105,7 +105,21 @@ Docdash supports the following options:
         "collapse": [false|true],       // Collapse navigation by default except current object's navigation of the current page
         "typedefs": [false|true],       // Include typedefs in menu
         "removeQuotes": [none|all|trim],// Remove single and double quotes, trim removes only surrounding ones
-        "scripts": []                   // Array of external (or relative local copied using templates.default.staticFiles.include) scripts to inject into HTML
+        "scripts": []                   // Array of external (or relative local copied using templates.default.staticFiles.include) scripts to inject into HTML,
+        "menu":{                        // Adding additional menu items after Home
+            "Project Website":{         // Menu item name
+                "href":"https://myproject.com", //the rest of HTML properties to add to manu item
+                "target":"_blank",
+                "class":"menu-item",
+                "id":"website_link"
+            },
+            "Forum":{
+                "href":"https://myproject.com.forum",
+                "target":"_blank",
+                "class":"menu-item",
+                "id":"forum_link"
+            }
+        }
     }
 }
 ```
