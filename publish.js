@@ -294,15 +294,21 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
         var itemsNav = '';
 
         items.forEach(function(item) {
+            var displayName;
             var methods = find({kind:'function', memberof: item.longname});
             var members = find({kind:'member', memberof: item.longname});
             var docdash = env && env.conf && env.conf.docdash || {};
-
+            var conf = env && env.conf || {};
             if ( !hasOwnProp.call(item, 'longname') ) {
                 itemsNav += '<li>' + linktoFn('', item.name);
                 itemsNav += '</li>';
             } else if ( !hasOwnProp.call(itemsSeen, item.longname) ) {
-                itemsNav += '<li>' + linktoFn(item.longname, item.name.replace(/^module:/, ''));
+                if (conf.templates.default.useLongnameInNav) {
+                    displayName = item.longname;
+                } else {
+                    displayName = item.name;
+                }
+                itemsNav += '<li>' + linktoFn(item.longname, displayName.replace(/\b(module|event):/g, ''));
 
                 if (docdash.static && members.find(function (m) { return m.scope === 'static'; } )) {
                     itemsNav += "<ul class='members'>";
