@@ -26,7 +26,8 @@
         "monospaceLinks": false,
         "default": {
             "outputSourceFiles": true,
-            "includeDate": false
+            "includeDate": false,
+            "useLongnameInNav": true
         }
     },
     "docdash": {
@@ -47,6 +48,7 @@
 		},
         "search": true,
         "collapse": true,
+        "navLevel": 0,
         "typedefs": true,
         "removeQuotes": "none",
         "scripts": [],
