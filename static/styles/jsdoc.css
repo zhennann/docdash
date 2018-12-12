@@ -600,7 +600,7 @@ span.param-type, .params td .param-type, .param-type dd {
 .level-hide {
     display: none;
 }
-html[search-mode] .level-hide {
+html[data-search-mode] .level-hide {
     display: block;
 }
 
