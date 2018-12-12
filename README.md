@@ -104,6 +104,8 @@ Docdash supports the following options:
         "search": [false|true],         // Display seach box above navigation which allows to search/filter navigation items
         "collapse": [false|true],       // Collapse navigation by default except current object's navigation of the current page
         "typedefs": [false|true],       // Include typedefs in menu
+        "navLevel": [integer],          // depth level to show in navbar, starting at 0 (false or -1 to disable)
+        "private": [false|true],        // set to false to not show @private in navbar
         "removeQuotes": [none|all|trim],// Remove single and double quotes, trim removes only surrounding ones
         "scripts": []                   // Array of external (or relative local copied using templates.default.staticFiles.include) scripts to inject into HTML,
         "menu":{                        // Adding additional menu items after Home

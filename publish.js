@@ -316,23 +316,37 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
 
     if (items && items.length) {
         var itemsNav = '';
+        var docdash = env && env.conf && env.conf.docdash || {};
+        var level = typeof docdash.navLevel === 'number' && docdash.navLevel >= 0 ?
+            docdash.navLevel :
+            Infinity;
 
         items.forEach(function(item) {
             var displayName;
             var methods = find({kind:'function', memberof: item.longname});
             var members = find({kind:'member', memberof: item.longname});
-            var docdash = env && env.conf && env.conf.docdash || {};
             var conf = env && env.conf || {};
+            var classes = '';
+
+            // show private class?
+            if (docdash.private === false && item.access === 'private') return;
+
+            // depth to show?
+            if (item.ancestors.length > level) {
+                classes += 'level-hide';
+            }
+
+            classes = classes ? ' class="'+ classes + '"' : '';
+            itemsNav +=  '<li'+ classes +'>';
             if ( !hasOwnProp.call(item, 'longname') ) {
-                itemsNav += '<li>' + linktoFn('', item.name);
-                itemsNav += '</li>';
+                itemsNav += linktoFn('', item.name);
             } else if ( !hasOwnProp.call(itemsSeen, item.longname) ) {
                 if (conf.templates.default.useLongnameInNav) {
                     displayName = item.longname;
                 } else {
                     displayName = item.name;
                 }
-                itemsNav += '<li>' + linktoFn(item.longname, displayName.replace(/\b(module|event):/g, ''));
+                itemsNav += linktoFn(item.longname, displayName.replace(/\b(module|event):/g, ''));
 
                 if (docdash.static && members.find(function (m) { return m.scope === 'static'; } )) {
                     itemsNav += "<ul class='members'>";
@@ -365,9 +379,9 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
                     itemsNav += "</ul>";
                 }
 
-                itemsNav += '</li>';
                 itemsSeen[item.longname] = true;
             }
+            itemsNav += '</li>';
         });
 
         if (itemsNav !== '') {
