@@ -316,19 +316,23 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
 
     if (items && items.length) {
         var itemsNav = '';
+        var docdash = env && env.conf && env.conf.docdash || {};
+        var level = typeof docdash.navLevel === 'number' && docdash.navLevel >= 0 ?
+            docdash.navLevel :
+            Infinity;
 
         items.forEach(function(item) {
             var displayName;
             var methods = find({kind:'function', memberof: item.longname});
             var members = find({kind:'member', memberof: item.longname});
-            var docdash = env && env.conf && env.conf.docdash || {};
             var conf = env && env.conf || {};
             var classes = '';
 
             // show private class?
             if (docdash.private === false && item.access === 'private') return;
 
-            if (docdash.navLevel >= 0 && item.ancestors.length > docdash.navLevel) {
+            // depth to show?
+            if (item.ancestors.length > level) {
                 classes += 'level-hide';
             }
 
@@ -375,7 +379,6 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
                     itemsNav += "</ul>";
                 }
 
-                itemsNav += '</li>';
                 itemsSeen[item.longname] = true;
             }
             itemsNav += '</li>';

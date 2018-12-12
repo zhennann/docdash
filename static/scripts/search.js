@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    var searchAttr = 'search-mode';
+    var searchAttr = 'data-search-mode';
     jQuery.expr[':'].Contains = function(a,i,m){
         return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
     };
