@@ -48,7 +48,6 @@
 		},
         "search": true,
         "collapse": true,
-        "navLevel": 0,
         "typedefs": true,
         "removeQuotes": "none",
         "scripts": [],
