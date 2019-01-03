@@ -40,6 +40,10 @@ article a:hover, article a:active {
   border-bottom-color: #222;
 }
 
+article .description a {
+    word-break: break-word;
+}
+
 p, ul, ol, blockquote {
   margin-bottom: 1em;
   line-height: 160%;
