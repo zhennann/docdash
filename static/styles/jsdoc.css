@@ -179,6 +179,10 @@ nav #nav-search{
     margin-top: 20px;
 }
 
+nav.wrap a{
+    word-wrap: break-word;
+}
+
 nav h3 {
   margin-top: 12px;
   font-size: 13px;

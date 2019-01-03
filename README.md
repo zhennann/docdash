@@ -103,6 +103,7 @@ Docdash supports the following options:
         },
         "search": [false|true],         // Display seach box above navigation which allows to search/filter navigation items
         "collapse": [false|true],       // Collapse navigation by default except current object's navigation of the current page
+        "wrap": [false|true],           // Wrap long navigation names instead of trimming them
         "typedefs": [false|true],       // Include typedefs in menu
         "navLevel": [integer],          // depth level to show in navbar, starting at 0 (false or -1 to disable)
         "private": [false|true],        // set to false to not show @private in navbar
