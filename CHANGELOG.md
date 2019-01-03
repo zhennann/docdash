@@ -1,3 +1,10 @@
+## Version 1.0.2
+
+* [styles] increase space between custom menu items
+* [option] Added `wrap` option to wrap long names instead of trimming them
+* [option] Added `navLevel` option to control depth level to show in navbar, starting at 0
+* [option] Added `private` option to show/hide @private in navbar
+
 ## Version 1.0.1
 
 * Allow adding custom menu items
