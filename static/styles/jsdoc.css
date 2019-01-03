@@ -234,13 +234,12 @@ nav ul ul a:active {
 }
 
 nav h2 {
-   font-size: 12px;
-   margin: 0;
+   font-size: 13px;
+   margin: 10px 0 0 0;
    padding: 0;
 }
 
 nav > h2 > a {
-   display: block;
    margin: 10px 0 -10px;
    color: #606 !important;
 }
