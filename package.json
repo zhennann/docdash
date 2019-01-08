@@ -22,5 +22,10 @@
   "keywords": [
     "jsdoc",
     "template"
+  ],
+  "files": [
+    "publish.js",
+    "static",
+    "tmpl"
   ]
 }
