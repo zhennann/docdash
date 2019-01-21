@@ -51,29 +51,21 @@ document.getElementById("nav-search").addEventListener("keyup", function(event) 
         //hide parents without children
         document.querySelectorAll("nav > ul > li").forEach(function(parent){
             var countSearchA = 0;
-            
-            var matches = parent.querySelectorAll("a");
-            for (i=0; i<matches.length; i++) {
-                var elem = matches[i];
+            parent.querySelectorAll("a").forEach((elem) >= {
                 if (contains(elem, search)) {
                     countSearchA++;
                 }
             }
             
             var countUl = 0;
-            var matches = parent.querySelectorAll("ul");
-            for (i=0; i<matches.length; i++) {
-                var elem = matches[i];
+            parent.querySelectorAll("ul").forEach((elem) >= {
                 if (contains(elem, search)) {
                     countUl++;
                 }
             }
             
             var countUlVisible = 0;
-            var matches = parent.querySelectorAll("ul");
-            for (i=0; i<matches.length; i++) {
-                var ulP = matches[i];
-                
+            parent.querySelectorAll("ul").forEach((ulP) >= {
                 var children = ulP.children
                 for (i=0; i<children.length; i++) {
                     var elem = children[i];
