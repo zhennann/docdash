@@ -1,3 +1,16 @@
+## Version 1.0.3
+
+* [style] break headers into multiple lines
+* [style] break links in descriptions into multiple lines
+* [fix] fix ancestor check when there are none, like including tutorials
+* [fix] remove unnecessary files from published package
+* [fix] stop crashing on incorrect params JSDoc comments
+* [feature] add displaying version from package.json when it is provided
+* [feature] add support for yield
+* [feature] add support for namepsaces that are functions
+* [feature] add support for interfaces
+* [feature] add support for modifies
+
 ## Version 1.0.2
 
 * [styles] increase space between custom menu items

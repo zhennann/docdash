@@ -15,6 +15,7 @@
                 paramRegExp = new RegExp('^(?:' + parentParam.name + '(?:\\[\\])*)\\.(.+)$');
             }		
             catch (e) {		
+                console.error("Problem parsing comment", e);
                 // there's probably a typo in the JSDoc comment that resulted in a weird		
                 // parameter name		
                 return;		
