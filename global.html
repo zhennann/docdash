@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>updateOperators - Docdash</title>
+    <title>Global - Docdash</title>
     
     <meta name="description" content="A clean, responsive documentation template theme for JSDoc 3." />
     
@@ -45,7 +45,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">updateOperators</h1>
+    <h1 class="page-title">Global</h1>
     
 
     
@@ -58,12 +58,8 @@
 <header>
     
         <h2>
-            <span class="ancestors"><a href="module-documents_probe.html">documents/probe</a>.</span>
         
-        updateOperators
         </h2>
-        
-            <div class="class-description"><p>This is not actually a class, but an artifact of the documentation system</p></div>
         
     
 </header>
@@ -74,24 +70,8 @@
         
             
 
-    
-    <h2>Constructor</h2>
-    
-
-    <h4 class="name" id="updateOperators"><span class="type-signature"></span>new updateOperators<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
 <dl class="details">
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="documents_probe.js.html">documents/probe.js</a>, <a href="documents_probe.js.html#line1007">line 1007</a>
-    </li></ul></dd>
     
 
     
@@ -128,38 +108,9 @@
 
 
 
+            
 
-<div class="description">
-    <p>These are the supported update operators</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
         
         </div>
     
@@ -177,12 +128,18 @@
     
 
     
-        <h3 class="subsection-title">Members</h3>
+
+    
+        <h3 class="subsection-title">Methods</h3>
 
         
             
-<h4 class="name" id=".$dec"><span class="type-signature">(static) </span>$dec<span class="type-signature"></span></h4>
 
+    
+
+    <h4 class="name" id="fibonacci"><span class="type-signature">(generator) </span>fibonacci<span class="signature">()</span><span class="type-signature"> &rarr; {number}</span></h4>
+
+    
 
 
 
@@ -192,7 +149,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="documents_probe.js.html">documents/probe.js</a>, <a href="documents_probe.js.html#line245">line 245</a>
+        <a href="generators_generator.js.html">generators/generator.js</a>, <a href="generators_generator.js.html#line1">line 1</a>
     </li></ul></dd>
     
 
@@ -232,7 +189,7 @@
 
 
 <div class="description">
-    <p>Decrements a field by the amount you specify. It takes the form<br><code>{ $dec: { field1: amount }</code></p>
+    <p>Generate numbers in the Fibonacci sequence.</p>
 </div>
 
 
@@ -241,18 +198,57 @@
 
 
 
-    <h5>Example</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+<h5>Yields:</h5>		
+		
+        
+<div class="param-desc">
+    The next number in the Fibonacci sequence.
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+		
     
-    <pre class="prettyprint"><code>var probe = require("documents/probe");
-probe.update( obj, {'name.last' : 'Owen', 'name.first' : 'LeRoy'},
-{$dec : {'password.changes' : 2}} );</code></pre>
-
-
 
         
             
-<h4 class="name" id=".$inc"><span class="type-signature">(static) </span>$inc<span class="type-signature"></span></h4>
 
+    
+
+    <h4 class="name" id="module:strings/format"><span class="type-signature"></span>module:strings/format<span class="signature">(format, &hellip;args)</span><span class="type-signature"> &rarr; {string}</span></h4>
+
+    
 
 
 
@@ -262,7 +258,7 @@ probe.update( obj, {'name.last' : 'Owen', 'name.first' : 'LeRoy'},
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="documents_probe.js.html">documents/probe.js</a>, <a href="documents_probe.js.html#line225">line 225</a>
+        <a href="strings_format.js.html">strings/format.js</a>, <a href="strings_format.js.html#line24">line 24</a>
     </li></ul></dd>
     
 
@@ -302,7 +298,7 @@ probe.update( obj, {'name.last' : 'Owen', 'name.first' : 'LeRoy'},
 
 
 <div class="description">
-    <p>Increments a field by the amount you specify. It takes the form<br><code>{ $inc: { field1: amount } }</code></p>
+    <p>Format a string quickly and easily using .net style format strings</p>
 </div>
 
 
@@ -311,298 +307,150 @@ probe.update( obj, {'name.last' : 'Owen', 'name.first' : 'LeRoy'},
 
 
 
-    <h5>Example</h5>
+
+
+    <h5>Examples</h5>
     
-    <pre class="prettyprint"><code>var probe = require("documents/probe");
-probe.update( obj, {'name.last' : 'Owen', 'name.first' : 'LeRoy'},
-{$inc : {'password.changes' : 2}} );</code></pre>
+    <pre class="prettyprint"><code>var strings = require("papyrus/strings");
+var s = strings.format("Hello {0}", "Madame Vastra");
+// s = "Hello Madame Vastra"</code></pre>
+
+    <pre class="prettyprint"><code>{@lang xml}
+&lt;span>
+     &lt;%= strings.format("Hello {0}", "Madame Vastra") %>
+&lt;/span></code></pre>
 
 
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
 
         
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
             
-<h4 class="name" id=".$pop"><span class="type-signature">(static) </span>$pop<span class="type-signature"></span></h4>
+                <td class="name"><code>format</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
 
 
+            
+            </td>
 
+            
+                <td class="attributes">
+                
 
+                
 
-<dl class="details">
+                
+                </td>
+            
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="documents_probe.js.html">documents/probe.js</a>, <a href="documents_probe.js.html#line277">line 277</a>
-    </li></ul></dd>
-    
+            
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+            <td class="description last"><p>A string format like &quot;Hello {0}, now take off your {1}!&quot;</p></td>
+        </tr>
 
     
 
-    
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">?</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>One argument per <code>{}</code> in the string, positionally replaced</p></td>
+        </tr>
 
     
+    </tbody>
+</table>
 
-    
 
-    
 
-    
 
-    
 
-    
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
 </dl>
 
-
-
-
-
-<div class="description">
-    <p>The $pop operator removes the first or last element of an array. Pass $pop a value of 1 to remove the last element<br>in an array and a value of -1 to remove the first element of an array. This will only work on arrays. Syntax:<br><code>{ $pop: { field: 1 } }</code> or <code>{ $pop: { field: -1 } }</code></p>
-</div>
-
-
-
-
-
-
-
-    <h5>Example</h5>
     
-    <pre class="prettyprint"><code>var probe = require("documents/probe");
-// attr is the name of the array field
-probe.update( data, {_id : '511d18827da2b88b09000133'}, {$pop : {attr : 1}} );</code></pre>
 
 
 
         
-            
-<h4 class="name" id=".$pull"><span class="type-signature">(static) </span>$pull<span class="type-signature"></span></h4>
-
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="documents_probe.js.html">documents/probe.js</a>, <a href="documents_probe.js.html#line318">line 318</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    <p>The $pull operator removes all instances of a value from an existing array. It looks like this:<br><code>{ $pull: { field: &lt;query&gt; } }</code></p>
-</div>
-
-
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>var probe = require("documents/probe");
-// attr is the name of the array field
-probe.update( data, {'email' : 'EWallace.43@fauxprisons.com'},
-{$pull : {attr : {"color" : "green"}}} );</code></pre>
-
-
-
-        
-            
-<h4 class="name" id=".$push"><span class="type-signature">(static) </span>$push<span class="type-signature"></span></h4>
-
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="documents_probe.js.html">documents/probe.js</a>, <a href="documents_probe.js.html#line301">line 301</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    <p>The $push operator appends a specified value to an array. It looks like this:<br><code>{ $push: { &lt;field&gt;: &lt;value&gt; } }</code></p>
-</div>
-
-
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>var probe = require("documents/probe");
-// attr is the name of the array field
-probe.update( data, {_id : '511d18827da2b88b09000133'},
-{$push : {attr : {"hand" : "new", "color" : "new"}}} );</code></pre>
-
-
-
-        
-            
-<h4 class="name" id=".$unset"><span class="type-signature">(static) </span>$unset<span class="type-signature"></span></h4>
-
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="documents_probe.js.html">documents/probe.js</a>, <a href="documents_probe.js.html#line265">line 265</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    <p>Removes the field from the object. It takes the form<br><code>{ $unset: { field1: &quot;&quot; } }</code></p>
-</div>
-
-
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>var probe = require("documents/probe");
-probe.update( data, {'name.first' : 'Yogi'}, {$unset : {'name.first' : ''}} );</code></pre>
-
-
-
-        
-    
-
     
 
     
