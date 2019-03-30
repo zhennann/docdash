@@ -1,6 +1,8 @@
 function hideAllButCurrent(){
     //by default all submenut items are hidden
-    document.querySelectorAll("nav > ul > li > ul li").style.display = "none";
+    document.querySelectorAll("nav > ul > li > ul li").forEach(function(parent) {
+        parent.style.display = "none";
+    });
     
     //only current page (if it exists) should be opened
     var file = window.location.pathname.split("/").pop();
