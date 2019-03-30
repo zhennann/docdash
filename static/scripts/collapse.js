@@ -1,11 +1,14 @@
 function hideAllButCurrent(){
     //by default all submenut items are hidden
-    $("nav > ul > li > ul li").hide();
+    document.querySelectorAll("nav > ul > li > ul li").style.display = "none";
     
     //only current page (if it exists) should be opened
     var file = window.location.pathname.split("/").pop();
-    $("nav > ul > li > a[href^='"+file+"']").parent().find("> ul li").show();
+    document.querySelectorAll("nav > ul > li > a[href^='"+file+"']").forEach(function(parent) {
+        parent.parentNode.querySelectorAll("ul li").forEach(function(elem) {
+            elem.style.display = "block";
+        });
+    });
 }
-$( document ).ready(function() {
-    hideAllButCurrent();
-});
+
+hideAllButCurrent();
