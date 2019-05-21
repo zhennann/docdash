@@ -1,3 +1,9 @@
+## Version 1.1.1
+
+* [feature] scroll to currently opened method on page load
+* [fix] fixed searching in IE11
+* [fix] hiding/showing find exact match to open only single relevant section
+
 ## Version 1.1.0
 
 * [scripts] remove jQuery as dependency
