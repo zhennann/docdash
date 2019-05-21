@@ -232,7 +232,8 @@
 
 
 <div class="description">
-    <p><code>$all</code> checks to see if all of the members of the query are included in an array<br><code>{array: {$all: [val1, val2, val3]}}</code></p>
+    <p><code>$all</code> checks to see if all of the members of the query are included in an array<br>
+<code>{array: {$all: [val1, val2, val3]}}</code></p>
 </div>
 
 
@@ -301,7 +302,8 @@ probe.find( data, {"categories" : {$all : ["cat4", "cat2", "cat1"]}} );</code></
 
 
 <div class="description">
-    <p>Returns true if all of the conditions of the query are met<br><code>{$and: [query1, query2, query3]}</code></p>
+    <p>Returns true if all of the conditions of the query are met<br>
+<code>{$and: [query1, query2, query3]}</code></p>
 </div>
 
 
@@ -373,7 +375,9 @@ probe.find( data, {$and : [
 
 
 <div class="description">
-    <p>This is like $all except that it works with an array of objects or value. It checks to see the array matches all<br>of the conditions of the query<br><code>{array: {$elemMatch: {path: value, path: {$operation: value2}}}</code></p>
+    <p>This is like $all except that it works with an array of objects or value. It checks to see the array matches all<br>
+of the conditions of the query<br>
+<code>{array: {$elemMatch: {path: value, path: {$operation: value2}}}</code></p>
 </div>
 
 
@@ -444,7 +448,9 @@ probe.find( data, {attr : {$elemMatch : [
 
 
 <div class="description">
-    <p><code>$eq</code> performs a <code>===</code> comparison by comparing the value directly if it is an atomic value.<br>otherwise if it is an array, it checks to see if the value looked for is in the array.<br><code>{field: value}</code> or <code>{field: {$eq : value}}</code> or <code>{array: value}</code> or <code>{array: {$eq : value}}</code></p>
+    <p><code>$eq</code> performs a <code>===</code> comparison by comparing the value directly if it is an atomic value.<br>
+otherwise if it is an array, it checks to see if the value looked for is in the array.<br>
+<code>{field: value}</code> or <code>{field: {$eq : value}}</code> or <code>{array: value}</code> or <code>{array: {$eq : value}}</code></p>
 </div>
 
 
@@ -515,7 +521,8 @@ probe.find( data, {categories : {$eq: "cat1"}} );</code></pre>
 
 
 <div class="description">
-    <p><code>$exists</code> Sees if a field exists.<br><code>{field: {$exists: true|false}}</code></p>
+    <p><code>$exists</code> Sees if a field exists.<br>
+<code>{field: {$exists: true|false}}</code></p>
 </div>
 
 
@@ -584,7 +591,8 @@ probe.find( data, {"name.middle" : {$exists : true}} );</code></pre>
 
 
 <div class="description">
-    <p><code>$gt</code> Sees if a field is greater than the value<br><code>{field: {$gt: value}}</code></p>
+    <p><code>$gt</code> Sees if a field is greater than the value<br>
+<code>{field: {$gt: value}}</code></p>
 </div>
 
 
@@ -653,7 +661,8 @@ probe.find( data, {"age" : {$gt : 24}} );</code></pre>
 
 
 <div class="description">
-    <p><code>$gte</code> Sees if a field is greater than or equal to the value<br><code>{field: {$gte: value}}</code></p>
+    <p><code>$gte</code> Sees if a field is greater than or equal to the value<br>
+<code>{field: {$gte: value}}</code></p>
 </div>
 
 
@@ -722,7 +731,8 @@ probe.find( data, {"age" : {$gte : 50}} );</code></pre>
 
 
 <div class="description">
-    <p><code>$in</code> Sees if a field has one of the values in the query<br><code>{field: {$in: [test1, test2, test3,...]}}</code></p>
+    <p><code>$in</code> Sees if a field has one of the values in the query<br>
+<code>{field: {$in: [test1, test2, test3,...]}}</code></p>
 </div>
 
 
@@ -791,7 +801,8 @@ probe.find( data, {"age" : {$in : [24, 28, 60]}} );</code></pre>
 
 
 <div class="description">
-    <p><code>$lt</code> Sees if a field is less than the value<br><code>{field: {$lt: value}}</code></p>
+    <p><code>$lt</code> Sees if a field is less than the value<br>
+<code>{field: {$lt: value}}</code></p>
 </div>
 
 
@@ -860,7 +871,8 @@ probe.find( data, {"age" : {$lt : 24}} );</code></pre>
 
 
 <div class="description">
-    <p><code>$lte</code> Sees if a field is less than or equal to the value<br><code>{field: {$lte: value}}</code></p>
+    <p><code>$lte</code> Sees if a field is less than or equal to the value<br>
+<code>{field: {$lte: value}}</code></p>
 </div>
 
 
@@ -929,7 +941,8 @@ probe.find( data, {"age" : {$lte : 50}} );</code></pre>
 
 
 <div class="description">
-    <p>Checks equality to a modulus operation on a field<br><code>{field: {$mod: [divisor, remainder]}}</code></p>
+    <p>Checks equality to a modulus operation on a field<br>
+<code>{field: {$mod: [divisor, remainder]}}</code></p>
 </div>
 
 
@@ -998,7 +1011,9 @@ probe.find( data, {"age" : {$mod : [2, 0]}} );</code></pre>
 
 
 <div class="description">
-    <p><code>$ne</code> performs a <code>!==</code> comparison by comparing the value directly if it is an atomic value. Otherwise, if it is an array<br>this is performs a &quot;not in array&quot;.<br>'{field: {$ne : value}}<code>or '{array: {$ne : value}}</code></p>
+    <p><code>$ne</code> performs a <code>!==</code> comparison by comparing the value directly if it is an atomic value. Otherwise, if it is an array<br>
+this is performs a &quot;not in array&quot;.<br>
+'{field: {$ne : value}}<code>or '{array: {$ne : value}}</code></p>
 </div>
 
 
@@ -1067,7 +1082,8 @@ probe.find( data, {"name.first" : {$ne : "Sheryl"}} );</code></pre>
 
 
 <div class="description">
-    <p><code>$nin</code> Sees if a field has none of the values in the query<br><code>{field: {$nin: [test1, test2, test3,...]}}</code></p>
+    <p><code>$nin</code> Sees if a field has none of the values in the query<br>
+<code>{field: {$nin: [test1, test2, test3,...]}}</code></p>
 </div>
 
 
@@ -1136,7 +1152,8 @@ probe.find( data, {"age" : {$nin : [24, 28, 60]}} );</code></pre>
 
 
 <div class="description">
-    <p>Returns true if none of the conditions of the query are met<br><code>{$nor: [query1, query2, query3]}</code></p>
+    <p>Returns true if none of the conditions of the query are met<br>
+<code>{$nor: [query1, query2, query3]}</code></p>
 </div>
 
 
@@ -1208,7 +1225,8 @@ probe.find( data, {$nor : [
 
 
 <div class="description">
-    <p>Logical NOT on the conditions of the query<br><code>{$not: [query1, query2, query3]}</code></p>
+    <p>Logical NOT on the conditions of the query<br>
+<code>{$not: [query1, query2, query3]}</code></p>
 </div>
 
 
@@ -1277,7 +1295,8 @@ probe.find( data, {$not : {"age" : {$lt : 24}}} );</code></pre>
 
 
 <div class="description">
-    <p>Returns true if any of the conditions of the query are met<br><code>{$or: [query1, query2, query3]}</code></p>
+    <p>Returns true if any of the conditions of the query are met<br>
+<code>{$or: [query1, query2, query3]}</code></p>
 </div>
 
 
@@ -1349,7 +1368,8 @@ probe.find( data, {$or : [
 
 
 <div class="description">
-    <p>Performs a regular expression test againts the field<br><code>{field: {$regex: re, $options: reOptions}}</code></p>
+    <p>Performs a regular expression test againts the field<br>
+<code>{field: {$regex: re, $options: reOptions}}</code></p>
 </div>
 
 
@@ -1418,7 +1438,8 @@ probe.find( data, {"name.first" : {$regex : "m*", $options : "i"}} );</code></pr
 
 
 <div class="description">
-    <p>Compares the size of the field/array to the query. This can be used on arrays, strings and objects (where it will count keys)<br><code>{'field|array</code>: {$size: value}}`</p>
+    <p>Compares the size of the field/array to the query. This can be used on arrays, strings and objects (where it will count keys)<br>
+<code>{'field|array</code>: {$size: value}}`</p>
 </div>
 
 
@@ -1456,7 +1477,7 @@ probe.find( data, {attr : {$size : 3}} );</code></pre>
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a> using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
