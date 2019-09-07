@@ -405,6 +405,12 @@ footer {
    user-select: text;
 }
 
+.prettyprint.linenums li code:empty:after {
+  content:"";
+  display:inline-block;
+  width:0px;
+}
+
 table {
   border-spacing: 0;
   border: 1px solid #ddd;
