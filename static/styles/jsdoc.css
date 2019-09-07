@@ -670,11 +670,20 @@ html[data-search-mode] .level-hide {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(fonts/Montserrat-Regular.ttf) format('truetype');
+  src: url('../fonts/Montserrat-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Montserrat-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Montserrat-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Montserrat-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
+
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  src: local('Montserrat Bold'), local('Montserrat-Bold'), url(fonts/Montserrat-Bold.ttf) format('truetype');
+  src: url('../fonts/Montserrat-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Montserrat-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Montserrat-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Montserrat-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
