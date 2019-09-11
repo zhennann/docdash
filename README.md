@@ -73,12 +73,12 @@ See the config file for the [fixtures](fixtures/fixtures.conf.json) or the sampl
 ## Options
 Docdash supports the following options:
 
-```
+```json5
 {
     "docdash": {
         "static": [false|true],         // Display the static members inside the navbar
         "sort": [false|true],           // Sort the methods in the navbar
-        "sectionOrder": [        // Order the main section in the navbar (default order shown here)
+        "sectionOrder": [               // Order the main section in the navbar (default order shown here)
              "Classes",
              "Modules",
              "Externals",
@@ -87,7 +87,7 @@ Docdash supports the following options:
              "Mixins",
              "Tutorials",
              "Interfaces"
-        ]
+        ],
         "disqus": "",                   // Shortname for your disqus (subdomain during site creation)
         "openGraph": {                  // Open Graph options (mostly for Facebook and other sites to easily extract meta information)
             "title": "",                // Title of the website
@@ -108,15 +108,15 @@ Docdash supports the following options:
         "navLevel": [integer],          // depth level to show in navbar, starting at 0 (false or -1 to disable)
         "private": [false|true],        // set to false to not show @private in navbar
         "removeQuotes": [none|all|trim],// Remove single and double quotes, trim removes only surrounding ones
-        "scripts": []                   // Array of external (or relative local copied using templates.default.staticFiles.include) js or css files to inject into HTML,
-        "menu":{                        // Adding additional menu items after Home
-            "Project Website":{         // Menu item name
+        "scripts": [],                  // Array of external (or relative local copied using templates.default.staticFiles.include) js or css files to inject into HTML,
+        "menu": {                       // Adding additional menu items after Home
+            "Project Website": {        // Menu item name
                 "href":"https://myproject.com", //the rest of HTML properties to add to manu item
                 "target":"_blank",
                 "class":"menu-item",
                 "id":"website_link"
             },
-            "Forum":{
+            "Forum": {
                 "href":"https://myproject.com.forum",
                 "target":"_blank",
                 "class":"menu-item",
