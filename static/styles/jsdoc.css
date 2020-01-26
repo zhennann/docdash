@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-
 * {
   box-sizing: border-box
 }
@@ -183,7 +181,6 @@ tt, code, kbd, samp {
 
 #main {
   float: right;
-  min-width: 360px;
   width: calc(100% - 240px);
 }
 
@@ -453,6 +450,12 @@ footer {
    user-select: text;
 }
 
+.prettyprint.linenums li code:empty:after {
+  content:"";
+  display:inline-block;
+  width:0px;
+}
+
 table {
   border-spacing: 0;
   border: 1px solid #ddd;
@@ -658,7 +661,7 @@ html[data-search-mode] .level-hide {
 }
 
 
-@media only screen and (min-width: 320px) and (max-width: 680px) {
+@media only screen and (max-width: 680px) {
   body {
     overflow-x: hidden;
   }
@@ -687,7 +690,6 @@ html[data-search-mode] .level-hide {
 
   #main {
     width: 100%;
-    min-width: 360px;
   }
 
   #main h1.page-title {
@@ -716,12 +718,35 @@ html[data-search-mode] .level-hide {
 }
 
 @font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Montserrat-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Montserrat-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Montserrat-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Montserrat-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Montserrat-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Montserrat-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Montserrat-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Montserrat-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
   font-family: 'Source Code Pro';
   font-style: normal;
   font-weight: 300;
   font-display: swap;
   src: local('Source Code Pro Light'), local('SourceCodePro-Light'), url(fonts/SourceCodePro-Light.ttf) format('truetype');
 }
+
 @font-face {
   font-family: 'Source Code Pro';
   font-style: normal;

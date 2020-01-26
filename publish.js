@@ -375,6 +375,9 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
                     itemsNav += "<ul class='methods'>";
 
                     methods.forEach(function (method) {
+                        if (docdash.static === false && method.scope === 'static') return;
+                        if (docdash.private === false && method.access === 'private') return;
+
                         itemsNav += "<li data-type='method'";
                         if(docdash.collapse)
                             itemsNav += " style='display: none;'";
