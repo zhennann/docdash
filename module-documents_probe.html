@@ -69,7 +69,7 @@
         <div class="container-overview">
         
             
-                <div class="description"><p>Queries objects in memory using a mongo-like notation for reaching into objects and filtering for records</p></div>
+                <div class="description usertext"><p>Queries objects in memory using a mongo-like notation for reaching into objects and filtering for records</p></div>
             
 
             
@@ -252,7 +252,7 @@
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>The delimiter to use when splitting an expression</p>
 </div>
 
@@ -335,7 +335,7 @@
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Returns true if all items match the query</p>
 </div>
 
@@ -515,7 +515,7 @@
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Returns true if any of the items match the query</p>
 </div>
 
@@ -695,7 +695,7 @@
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Returns true if all items match the query. Aliases as <code>all</code></p>
 </div>
 
@@ -875,7 +875,7 @@
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Find all records that match a query</p>
 </div>
 
@@ -1059,7 +1059,7 @@
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Find all records that match a query and returns the keys for those items. This is similar to <a href="module-documents_probe.html#.find">module:documents/probe.find</a> but instead of returning<br>
 records, returns the keys. If <code>obj</code> is an object it will return the hash key. If 'obj' is an array, it will return the index</p>
 </div>
@@ -1240,7 +1240,7 @@ records, returns the keys. If <code>obj</code> is an object it will return the h
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Returns the first record that matches the query. Aliased as <code>seek</code>.</p>
 </div>
 
@@ -1420,7 +1420,7 @@ records, returns the keys. If <code>obj</code> is an object it will return the h
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Returns the first record that matches the query and returns its key or index depending on whether <code>obj</code> is an object or array respectively.<br>
 Aliased as <code>seekKey</code>.</p>
 </div>
@@ -1601,7 +1601,7 @@ Aliased as <code>seekKey</code>.</p>
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Reaches into an object and allows you to get at a value deeply nested in an object. This is not a query, but a<br>
 straight reach in, useful for event bindings</p>
 </div>
@@ -1783,7 +1783,7 @@ straight reach in, useful for event bindings</p>
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Binds the query and update methods to a specific object and adds the methods to that object. When called these<br>
 methods can skip the first parameter so that find(object, query) can just be called as object.find(query)</p>
 </div>
@@ -1950,7 +1950,7 @@ a whole other object, you specify that here. Otherwise the <code>obj</code> is a
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Binds the query and update methods to a new object. When called these<br>
 methods can skip the first parameter so that find(object, query) can just be called as find(query)</p>
 </div>
@@ -2112,7 +2112,7 @@ methods can skip the first parameter so that find(object, query) can just be cal
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Remove all items in the object/array that match the query</p>
 </div>
 
@@ -2299,7 +2299,7 @@ methods can skip the first parameter so that find(object, query) can just be cal
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>This will write the value into a record at the path, creating intervening objects if they don't exist. This does not work as filtered<br>
 update and is meant to be used on a single record. It is a nice way of setting a property at an arbitrary depth at will.</p>
 </div>
@@ -2505,7 +2505,7 @@ update and is meant to be used on a single record. It is a nice way of setting a
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Returns true if any of the items match the query. Aliases as <code>any</code></p>
 </div>
 
@@ -2685,7 +2685,7 @@ update and is meant to be used on a single record. It is a nice way of setting a
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Returns the set of unique records that match a query</p>
 </div>
 
@@ -2865,7 +2865,7 @@ update and is meant to be used on a single record. It is a nice way of setting a
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Updates all records in obj that match the query. See <a href="module-documents_probe.updateOperators.html">module:documents/probe.updateOperators</a> for the operators that are supported.</p>
 </div>
 

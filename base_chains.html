@@ -62,7 +62,7 @@
         base/chains
         </h2>
         
-            <div class="class-description"><p>Chains define the primary composition elements (functions) that determine the order of execution.</p></div>
+            <div class="class-description usertext"><p>Chains define the primary composition elements (functions) that determine the order of execution.</p></div>
         
     
 </header>
@@ -233,7 +233,7 @@
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>The <code>close</code> method asks an object to shut itself down in a way that will allow it to be reopened, unlike the<br>
 <a href="base_chains.html#end">end method</a> which will call the destroy method which should make the object unusable, but also<br>
 devoid of all resources whereas <code>close</code> may still keep some resources open.</p>
@@ -315,7 +315,7 @@ devoid of all resources whereas <code>close</code> may still keep some resources
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>The <code>end</code> method will call the destroy method which should make the object unusable and<br>
 devoid of all resources, unlike the<br>
 <a href="base_chains.html#close">close method</a> asks an object to shut itself down in a way that will allow it to be reopened.</p>
@@ -396,7 +396,7 @@ foo=bar</code></pre>
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>If you are using the open/close paradigm for an object that can kind of go dormant on <a href="base_chains.html#close">base/chains#close</a> and can be &quot;reopened&quot;<br>
 again later, here is where the &quot;open&quot; code will go.</p>
 <p>This used the <code>after</code> chain which means that the first one defined is the first one destroyed.</p>

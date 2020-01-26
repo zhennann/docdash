@@ -64,7 +64,7 @@
         updateOperators
         </h2>
         
-            <div class="class-description"><p>This is not actually a class, but an artifact of the documentation system</p></div>
+            <div class="class-description usertext"><p>This is not actually a class, but an artifact of the documentation system</p></div>
         
     
 </header>
@@ -130,7 +130,7 @@
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>These are the supported update operators</p>
 </div>
 
@@ -232,7 +232,7 @@
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Decrements a field by the amount you specify. It takes the form<br>
 <code>{ $dec: { field1: amount }</code></p>
 </div>
@@ -303,7 +303,7 @@ probe.update( obj, {'name.last' : 'Owen', 'name.first' : 'LeRoy'},
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Increments a field by the amount you specify. It takes the form<br>
 <code>{ $inc: { field1: amount } }</code></p>
 </div>
@@ -374,7 +374,7 @@ probe.update( obj, {'name.last' : 'Owen', 'name.first' : 'LeRoy'},
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>The $pop operator removes the first or last element of an array. Pass $pop a value of 1 to remove the last element<br>
 in an array and a value of -1 to remove the first element of an array. This will only work on arrays. Syntax:<br>
 <code>{ $pop: { field: 1 } }</code> or <code>{ $pop: { field: -1 } }</code></p>
@@ -446,7 +446,7 @@ probe.update( data, {_id : '511d18827da2b88b09000133'}, {$pop : {attr : 1}} );</
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>The $pull operator removes all instances of a value from an existing array. It looks like this:<br>
 <code>{ $pull: { field: &lt;query&gt; } }</code></p>
 </div>
@@ -518,7 +518,7 @@ probe.update( data, {'email' : 'EWallace.43@fauxprisons.com'},
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>The $push operator appends a specified value to an array. It looks like this:<br>
 <code>{ $push: { &lt;field&gt;: &lt;value&gt; } }</code></p>
 </div>
@@ -590,7 +590,7 @@ probe.update( data, {_id : '511d18827da2b88b09000133'},
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Removes the field from the object. It takes the form<br>
 <code>{ $unset: { field1: &quot;&quot; } }</code></p>
 </div>

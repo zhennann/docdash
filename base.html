@@ -62,7 +62,7 @@
         base
         </h2>
         
-            <div class="class-description"><p>The base of all classes in the system, this is one of the few pure &quot;classes&quot; in core the of the system. It is a<br>
+            <div class="class-description usertext"><p>The base of all classes in the system, this is one of the few pure &quot;classes&quot; in core the of the system. It is a<br>
 pretty clean little class whose primary purpose is to surface the composition chains and a basis for storing<br>
 options on mixin and subclass instances. Options are handled at the instance rather than the prototype level<br>
 so that multiple instances don't compete for default values.</p></div>
@@ -252,7 +252,7 @@ so that multiple instances don't compete for default values.</p></div>
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>The <code>close</code> method asks an object to shut itself down in a way that will allow it to be reopened, unlike the<br>
 <a href="base_chains.html#end">end method</a> which will call the destroy method which should make the object unusable, but also<br>
 devoid of all resources whereas <code>close</code> may still keep some resources open.</p>
@@ -346,7 +346,7 @@ devoid of all resources whereas <code>close</code> may still keep some resources
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>If you are using the open/close paradigm for an object that can kind of go dormant on <a href="base_chains.html#close">base/chains#close</a> and can be &quot;reopened&quot;<br>
 again later, here is where the &quot;open&quot; code will go.</p>
 <p>This used the <code>after</code> chain which means that the first one defined is the first one destroyed.</p>
@@ -428,7 +428,7 @@ again later, here is where the &quot;open&quot; code will go.</p>
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Add a default option to a class. The default options are only set if there is not already a<br>
 value for the option.</p>
 </div>
@@ -572,7 +572,7 @@ value for the option.</p>
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Add an option to a class. If any members of the hash already exist in <code>this.options</code>, they will be overwritten.</p>
 </div>
 
@@ -722,7 +722,7 @@ value for the option.</p>
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Called when it is time to get rid of all of your instance level references and objects and events. You can<br>
 define this method on your own classes without having to call the superclass instance. It is called by<br>
 <code>instance.end()</code> automatically</p>
@@ -825,7 +825,7 @@ define this method on your own classes without having to call the superclass ins
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>Call this to close your object and dispose of all maintained resources. You can define this method on your<br>
 own classes without having to call the superclass instance, however it is reccomended that you put<br>
 all disposal code in <code>destroy()</code>. You must be disciplined about calling this on your instances.</p>
