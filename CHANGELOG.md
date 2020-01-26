@@ -1,3 +1,11 @@
+## Version 1.2.0
+
+* [feature] host fonts locally
+* [feature] separate styles for headers inside user markdown
+* [feature] hide static/private method depending of the config
+* [fix] fix empty source code lines in some browsers
+* [fix] improved viewing theme on smaller screens
+
 ## Version 1.1.1
 
 * [feature] scroll to currently opened method on page load
