@@ -579,9 +579,30 @@ exports.publish = function(taffyData, opts, tutorials) {
 
     // update outdir if necessary, then create outdir
     var packageInfo = ( find({kind: 'package'}) || [] ) [0];
-    if (packageInfo && packageInfo.name) {
-        outdir = path.join( outdir, packageInfo.name, (packageInfo.version || '') );
+    if (packageInfo) {
+        var subdirs = [outdir];
+
+        if (packageInfo.name) {
+            var packageName = packageInfo.name.split('/');
+
+            if (packageName.length > 1 && docdash.scopeInOutputPath !== false) {
+                subdirs.push(packageName[0]);
+            }
+
+            if (docdash.nameInOutputPath !== false) {
+                subdirs.push((packageName.length > 1 ? packageName[1] : packageName[0]));
+            }
+        }
+
+        if (packageInfo.version && docdash.versionInoutputPath !== false) {
+            subdirs.push(packageInfo.version);
+        }
+
+        if (subdirs.length > 1) {
+            outdir = path.join.apply(null, subdirs);
+        }
     }
+    
     fs.mkPath(outdir);
 
     // copy the template's static files to outdir
