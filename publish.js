@@ -594,7 +594,7 @@ exports.publish = function(taffyData, opts, tutorials) {
             }
         }
 
-        if (packageInfo.version && docdash.versionInoutputPath !== false) {
+        if (packageInfo.version && docdash.versionInOutputPath !== false) {
             subdirs.push(packageInfo.version);
         }
 
