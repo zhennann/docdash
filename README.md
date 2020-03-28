@@ -50,7 +50,7 @@ See the config file for the [fixtures](fixtures/fixtures.conf.json) or the sampl
     },
     "source": {
         "include": "../js",
-        "includePattern": ".js$",
+        "includePattern": "\\.js$",
         "excludePattern": "(node_modules/|docs)"
     },
     "plugins": [
