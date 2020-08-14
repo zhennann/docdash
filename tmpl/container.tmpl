@@ -20,7 +20,7 @@
 <section>
 
 <header>
-    <?js if ((!doc.longname || doc.kind !== 'module') && doc.kind !== 'namespace') { ?>
+    <?js if (!doc.longname || doc.kind !== 'module') { ?>
         <h2><?js if (doc.ancestors && doc.ancestors.length) { ?>
             <span class="ancestors"><?js= doc.ancestors.join('') ?></span>
         <?js } ?>
@@ -31,7 +31,7 @@
         <?js if (doc.classdesc) { ?>
             <div class="class-description usertext"><?js= doc.classdesc ?></div>
         <?js } ?>
-    <?js } else if (doc.kind === 'module' && doc.modules && doc.kind !== 'namespace') { ?>
+    <?js } else if (doc.kind === 'module' && doc.modules && doc.kind) { ?>
         <?js doc.modules.forEach(function(module) { ?>
             <?js if (module.classdesc) { ?>
                 <div class="class-description"><?js= module.classdesc ?></div>
