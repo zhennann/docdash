@@ -378,12 +378,20 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
                         if (docdash.static === false && method.scope === 'static') return;
                         if (docdash.private === false && method.access === 'private') return;
 
-                        itemsNav += "<li data-type='method'";
+                        var navItem = '';
+                        var navItemLink = linkto(method.longname, method.name);
+                        var strNewLink = '.html#' + method.name;
+
+                        navItemLink = navItemLink.replace('.html', strNewLink);
+
+                        navItem += "<li data-type='method'";
                         if(docdash.collapse)
-                            itemsNav += " style='display: none;'";
-                        itemsNav += ">";
-                        itemsNav += linkto(method.longname, method.name);
-                        itemsNav += "</li>";
+                            navItem += " style='display: none;'";
+                        navItem += ">";
+                        navItem += navItemLink;
+                        navItem += "</li>";
+
+                        itemsNav += navItem;
                     });
 
                     itemsNav += "</ul>";
