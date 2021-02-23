@@ -4,7 +4,6 @@ if (typeof fetch === 'function') {
     scrollToNavItem()
     // hideAllButCurrent not always loaded
     if (typeof hideAllButCurrent === 'function') hideAllButCurrent()
-    else console.log('hideAllButCurrent not exists')
     return true
   }
   fetch('./nav.inc.html')
