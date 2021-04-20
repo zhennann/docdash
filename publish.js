@@ -730,6 +730,11 @@ exports.publish = function(taffyData, opts, tutorials) {
         ).concat(files),
     indexUrl);
 
+    // common nav generation, no need for templating here, we already have full html
+    if (docdash.commonNav) {
+        fs.writeFileSync(path.join(outdir, 'nav.inc.html'), view.nav, 'utf8');
+    }
+
     // set up the lists that we'll use to generate pages
     var classes = taffy(members.classes);
     var modules = taffy(members.modules);
