@@ -7,6 +7,10 @@ var self = this;
     <section class="package">
         <h3><?js= data.name ?> <?js= data.version ?></h3>		
     </section>
+<?js } else { ?>
+    <section class="package">
+        <h3><?js= env.conf.docdash.meta.title ?></h3>		
+    </section> 
 <?js } ?>
 <?js if (data.readme) { ?>
     <section class="readme usertext">
