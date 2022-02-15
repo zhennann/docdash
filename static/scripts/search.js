@@ -4,6 +4,10 @@ function contains(a, m) {
 }
 
 function handleNavSearch(search) {
+  window.localStorage.setItem("search", search);
+  if (search) {
+    search = search.toUpperCase();
+  }
   if (!search) {
     //no search, show all results
     document.documentElement.removeAttribute(searchAttr);
@@ -109,16 +113,23 @@ function ParseUrlQuery(url) {
 document
   .getElementById("nav-search")
   .addEventListener("keyup", function (event) {
-    var search = this.value.toUpperCase();
-    handleNavSearch(search);
+    handleNavSearch(this.value);
   });
 
 function handlePageSearchInit() {
+  var search;
+  // url query
   var query = ParseUrlQuery();
-  var search = query.search;
+  search = query.search;
+  // local storage
+  if (!search) {
+    search = window.localStorage.getItem("search");
+  }
   if (!search) return;
+  // do search
   document.getElementById("nav-search").value = search;
-  handleNavSearch(search.toUpperCase());
+  handleNavSearch(search);
+  showCurrent();
 }
 
 if (document.readyState === "loading") {
